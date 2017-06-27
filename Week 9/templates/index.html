@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+<h2>Overview:</h2>
+<h3>Currently, you have {{cash|round(2, 'common')}}$ in cash.</h3>
+<table>
+<tbody>
+    <tr>
+        <th>Stock</th>
+    {% for key in stock_amount.keys() %}
+        <td>{{ key|e }}</td>
+    {% endfor %}
+    </tr>
+    <tr>
+        <th>Amount</th>    
+    {% for value in stock_amount.values() %}
+        <td>{{ value|round(2, 'common') }}</td>
+    {% endfor %}
+    </tr>
+    <tr>
+    <th>Price per Share</th>
+    {% for value in price.values() %}
+        <td>{{ value|round(2, 'common') }}$</td>
+    {% endfor %}
+    </tr>
+    <tr>
+    <th>Total Value</th>
+        {% for value in total_per_stock.values() %}
+        <td>{{ value|round(2, 'common') }}$</td>
+    {% endfor %}
+    </tr>
+</tbody>
+</table>    
+<h3>The value of your portfolio (including your cash) is {{total_sum|round(2, 'common') }}$.</h3>
+{% endblock %}

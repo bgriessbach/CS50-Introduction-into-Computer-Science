@@ -4,7 +4,14 @@
 
 Re-implement Mario from Week 1 in Pyton
 
-## Ceasar
+## Credit
+
+Re-implement Credit from Week 1 in Python
+
+## Caesar
+
+Re-implement Caesar from Week 2 in Python
 
 ## Vigenere
 
+Re-implement Vigenere from Week 2 in Python

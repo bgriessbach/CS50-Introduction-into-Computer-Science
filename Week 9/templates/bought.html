@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Bought
+{% endblock %}
+
+{% block main %}
+<h2>Here is what you bought:</h2>
+<table>
+<tbody>
+<tr><td>Name</td><td>{{quote.name}}</td></tr>
+<tr><td>Symbol</td><td>{{quote.symbol}}</td></tr>
+<tr><td>Amount</td><td>{{amount}}</td></tr>
+<tr><td>Price per Share</td><td>{{quote.price}}</td></tr>
+<tr><td>Total Price</td><td>{{total}}</td></tr>
+</tbody>
+</table>
+<br></br>
+<form action="{{ url_for('bought') }}" method="post">
+        <fieldset>
+            <div class="form-group">
+                <button class="btn btn-default" type="submit">Return to Index!</button>
+            </div>
+        </fieldset>
+    </form>
+
+{% endblock %}

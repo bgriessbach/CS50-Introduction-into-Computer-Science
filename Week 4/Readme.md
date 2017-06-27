@@ -29,3 +29,7 @@ the third must be the name of the resized version to be written.
 + If your program is not executed with such, it should remind the user of correct usage, as with fprintf (to stderr), and main should return 1.
 
 Your program, if it uses malloc, must not leak any memory.
+
+## Whodunit
+
+Implement a program called whodunit that reveals Mr. Boddy’s drawing in such a way that you can recognize whodunit.

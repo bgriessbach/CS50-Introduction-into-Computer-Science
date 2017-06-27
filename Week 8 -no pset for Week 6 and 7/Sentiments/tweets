@@ -1,0 +1,42 @@
+#!/usr/bin/env python3
+
+import os
+import sys
+
+from analyzer import Analyzer
+from termcolor import colored
+from helpers import get_user_timeline
+
+import os
+
+def main():
+
+    # ensure proper usage
+    if len(sys.argv) != 2:
+        sys.exit("Usage: ./tweets @username")
+
+    # absolute paths to lists
+    positives = os.path.join(sys.path[0], "positive-words.txt")
+    negatives = os.path.join(sys.path[0], "negative-words.txt")
+
+    # instantiate analyzer
+    analyzer = Analyzer(positives, negatives)
+
+    #get tweets
+    tweet=dict()
+    tweet=get_user_timeline(sys.argv[1], count=50)
+    if tweet==None:
+        sys.exit("Tweets not found")
+
+    # analyze and display tweets
+    for line in tweet:
+        score = analyzer.analyze(line)
+        if score > 0.0:
+            print(colored("{} {}", "green").format(score, line))
+        elif score < 0.0:
+            print(colored("{} {}", "red").format(score, line))
+        else:
+            print(colored("{} {}", "yellow").format(score, line))
+
+if __name__ == "__main__":
+    main()

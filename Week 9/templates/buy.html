@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy
+{% endblock %}
+
+{% block main %}
+    <form action="{{ url_for('buy') }}" method="post">
+        <h2>Buy a Stock!</h2>
+        <fieldset>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="stock" placeholder="Stock Symbol" type="text"/>
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="amount" placeholder="Amount" type="text"/>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-default" type="submit">Buy the Stock</button>
+            </div>
+        </fieldset>
+    </form>
+{% endblock %}

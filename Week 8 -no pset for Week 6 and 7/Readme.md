@@ -32,6 +32,6 @@ $ ./tweets @cs50
 
 ### Implement a website that generates a pie chart categorizing a user’s tweets.
 
-![My image](bgriessbach/CS50-Introduction-into-Computer-Science/edit/master/Week%208%20-no%20pset%20for%20Week%206%20and%207/sentiments.png)
+![My image](https://github.com/bgriessbach/CS50-Introduction-into-Computer-Science/blob/master/Week%208%20-no%20pset%20for%20Week%206%20and%207/sentiments.png)
 
 @katyperry

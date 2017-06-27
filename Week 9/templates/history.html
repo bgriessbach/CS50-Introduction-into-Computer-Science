@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+<h2>Transaction History</h2>
+<h3>Buy transactions are marked with positive amounts, sell transactions with negative amounts.</h3>
+<table>
+<tbody>
+    <tr>
+        <th>Stock</th>
+        <th>Amount</th>
+        <th>Price per Share</th>
+        <th>Date</th>
+    </tr>
+    {% for line in row_records %}
+        <tr>
+        <td>{{ line.Stock }}</td>
+        <td>{{ line.Amount }}</td>
+        <td>{{ line.Price|round(2, 'common') }}</td>
+        <td>{{ line.Date }}</td>
+        </tr>    
+    {% endfor %}
+
+</tbody>
+</table>    
+{% endblock %}

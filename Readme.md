@@ -29,7 +29,7 @@ Weekly problem sets completed for CS50
 + Mario Pyramid in Python
 + Credit Card Check in Python
 + Caesar cypher in Python
-+ Website to catagorise tweets as positive/negative/neutral
++ Website to catagorize tweets as positive/negative/neutral
 
 ## Week 9
 + Finance portfolio management website

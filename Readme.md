@@ -33,3 +33,6 @@ Weekly problem sets completed for CS50
 
 ## Week 9
 + Finance portfolio management website
+
+## Week 10
++ interactive Map to search for local news articles
